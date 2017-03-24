@@ -10,6 +10,22 @@ function SumOfASquare(naturalNumbers){
   this.naturalNumbers = naturalNumbers;
 }
 
+SumOfASquare.prototype.sumOfSquares = function() {
+  var sum = 0;
+  for (var i = 0; i <= this.naturalNumbers; i++) {
+    sum += i * i;
+  }
+  return sum;
+};
+
+SumOfASquare.prototype.squareOfTheSums = function() {
+  var sum = 0;
+  for (var i = 0; i <= this.naturalNumbers; i++) {
+    sum += i;
+  }
+  sum *= sum;
+  return sum;
+};
 // do work here
 
 // overwrite the object prototype, or add methods to the prototype
